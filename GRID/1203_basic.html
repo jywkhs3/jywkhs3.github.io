@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid layout</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    body{
+      height: 100vh;
+    }
+    .container{
+      height: 100%;
+      display: grid;
+      /** 채우고 남는 공간은 냅둠**/
+      /* grid-template-columns: repeat(auto-fill, minmax(20%,auto)); */
+      /***fit : 남는 공간없이 채움**/
+      grid-template-columns: repeat(auto-fit, minmax(20%,auto));
+    }
+    .item{
+      border: 1px solid #222;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <!-- <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div> -->
+  </div>
+</body>
+</html>

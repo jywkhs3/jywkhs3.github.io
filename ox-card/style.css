@@ -1,0 +1,46 @@
+@charset "utf8";
+
+body{
+    background-color: lavenderblush;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main{
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+}
+div.quiz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    width: 100px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+}
+button.o:hover{
+    background-color: blue;
+    color: black;
+}
+button.x:hover{
+    background-color: hotpink;
+    color: black;
+}
+p{
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+}

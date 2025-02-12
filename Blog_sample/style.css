@@ -1,0 +1,308 @@
+@charset "utf-8";
+/*
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Paperlogy-5Medium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+} 
+@font-face {
+  font-family: 'Paperlogy-2ExtraLight';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+*/
+
+@import url('https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+@font-face{
+  font-family:"Wanted Sans";
+  src:url("woff2/WantedSansVariable.split.0.woff2") format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root{
+  /*** color ***/
+  --color-bg: #c9c9c8;
+  --color-main: #de522f;
+  --color-font: #222;
+}
+html{
+  font-size: 62.5%; /*폰트사이즈 10px 지정*/
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "Wanted Sans", sans-serif;
+  background-color: var(--color-bg);
+  font-size: 1rem;
+}
+/***fix-home***/
+.fix-home{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+  color: var(--color-bg);
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+main{
+  background-color: var(--color-bg);
+  width: 1440px;
+  margin: 50px auto;
+}
+main> section{
+  height: 100vh;
+  /**여백값설정**/
+}
+
+#main> h1{
+  color: var(--color-main);
+  font-size: 13rem;
+}
+#main> h1> p{
+  line-height: 13rem;
+}
+#main > p:nth-of-type(1){
+  width: 50rem;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 20rem;
+}
+#main> div{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  float: left;
+}
+#main> div> span{
+  color: var(--color-main);
+  font-size: 3rem;
+}
+#main> div> hr{
+  background-color: var(--color-main);
+  width: 20rem;
+  height: 1px;
+  border: none;
+}
+#main > p:nth-of-type(2){
+  color: var(--color-main);
+  font-size: 3rem;
+  float: right;
+}
+#main:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+/***section common***/
+section> h2{
+  color: var(--color-main);
+  font-size: 7rem;
+  margin: 7rem 0;                ;
+}
+/***section about***/
+#about{}
+#about> article{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+#about> article
+> div.img{
+  width: 420px;
+  height: 565px;
+  border: 1px solid #222;
+  border-radius: 50px;
+}
+#about> article> ul{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 4%;
+}
+#about> article> ul> li{
+  width: 48%;
+  border-top: 3px solid var(--color-main);
+}
+#about> article> ul> li:last-child{
+  width: 100%;
+}
+#about> article> ul> li> h3{
+  font-size: 3rem;
+  color: var(--color-main);
+  padding: 1rem;
+}
+#about> article> ul> li p{
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+/***section clone codding***/
+#clone> .wrap{
+  display: flex;
+  gap: 3rem;
+}
+#clone> .wrap> div.img{
+  width: 650px;
+  height: 600px;
+  border: 1px solid #222;
+  border-radius: 50px;
+}
+#clone> .wrap> article{
+  flex: 1;
+}
+#clone> .wrap> article> div{
+  margin: 1.5rem 0;
+  padding: 1rem;
+}
+/*head*/
+#clone> .wrap> article> .head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#clone > .wrap> article> .head> h3{
+  font-size: 6rem;
+  font-weight: 400;
+}
+#clone > .wrap> article> .head> .icon-btn> i{
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-main);
+  border-radius: 50%;
+  color: var(--color-bg);
+  text-align: center;
+  line-height: 80px;
+  font-size: 60px;
+}
+/*overview,txt*/
+#clone > .wrap> article> .overview,
+#clone > .wrap> article> .txt{
+  border-top: 3px solid var(--color-main);
+}
+#clone > .wrap> article> .overview> .title,
+#clone > .wrap> article> .txt> p
+{
+  font-size: 3rem;
+}
+#clone > .wrap> article> .overview> .detail{
+  font-size: 2rem;
+}
+/*view-btn*/
+#clone> .wrap> article> .view-btn{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+#clone> .wrap> article> .view-btn> p{
+  flex: 1;
+  font-size: 3.6rem;
+  color: var(--color-bg);
+  background-color: var(--color-main);
+  border: 1px solid var(--color-font) ;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/***section publishing***/
+#publishing> .circle{
+  text-align: center;
+}
+#publishing> .circle> span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+}
+#publishing> .item{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 3rem 0;
+}
+#publishing> .item> div{
+  width: 420px;
+  height: 280px;
+  border-radius: 20px;
+  border: 1px solid var(--color-font);
+}
+
+/***모바일 테블릿 사이즈 통일***/
+@media screen and (max-width:768px){
+  /**fontsize : 7px
+  main-width :80%
+  height : auto
+  **/
+
+  /** layout 변경**/
+  html{
+    font-size: 43.7%; 
+  }
+  main{
+    background-color: var(--color-bg);
+    width: 80%;
+    min-width: 320px;
+    margin: 50px auto;
+  }
+  main> section{
+    height: auto;
+  }
+  #main > p:nth-of-type(2),
+  .fix-home{
+    display: none;
+  }
+  #about > article,
+  #about> article> ul,
+  #clone> .wrap,
+  #publishing> .item{
+    flex-direction: column;
+  }
+  #about> article> ul> li{
+    width: 100%;
+
+  }
+  /**style size 변경**/
+  #main> h1{
+    font-size: 7rem;
+  }
+  #main> h1> p{
+    line-height: 7rem;
+  }
+  #about> article> div.img{
+    width: 320px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  #clone> .wrap> div.img{
+    width: 320px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  #clone> .wrap> article> .head> .icon-btn> i{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  #publishing> .item> div{
+    width: 320px;
+    height: 280px;
+    margin: 0 auto;
+  }
+}

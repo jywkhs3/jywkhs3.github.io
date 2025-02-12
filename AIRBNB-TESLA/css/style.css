@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+/*rset.css*/
+*{margin: 0; padding: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+body{height: 100vh;}
+
+/*google font*/
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*HEADER SECTION*/
+header > nav > div.logo{
+  letter-spacing: 10px;
+  cursor: pointer;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-size: 4rem;
+}
+header > nav > ul > li{
+  display: inline-block;
+  /* margin: 0 40px; */
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 5px;
+  transition: 0.8s;
+  font-size: 1.5rem;
+}
+header > nav > ul > li:hover{
+  background-color: rgba(0,0,0,0.6);
+  padding: 1rem;
+}
+header > nav > div.icons > a{
+  margin: 0 10px; 
+  color: #fff;
+  font-size: 2rem;
+}
+header > nav{
+  min-width: 800px;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+}
+header{
+  height: 100%;
+  background-size: cover;
+  background-image: url(../IMAGE/image0.jfif);
+  color: #fff;
+  font-size: 20px;
+  position: relative; /*기준범위*/
+}
+
+header > div{
+
+  /*relative변경*/
+  /* position: relative;
+  top: 400px;
+  left: 100px; */
+
+  /*absolute변경*/
+  position: absolute;
+  bottom: 200px;
+  left: 100px;
+
+}
+header > div > p:nth-of-type(1){
+  font-size: 70px;
+  letter-spacing: 2px; /*폰트좌우여백*/
+  line-height: 1; /*폰트상하여백*/
+  margin-bottom: 1rem;
+}
+
+/*공통버튼*/
+.btn{
+  width: 150px;
+  text-align: center;
+  display: inline-block;
+  color: #222;
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn:hover{
+  background-color: rgba(255,255,255,0.3);
+
+}
+.white{
+  background-color: white;
+  color: #222;
+}
+.blue{
+  background-color: cornflowerblue;
+  color: #fff;
+}
+
+/*MAIN SECTION*/
+main > div.card{
+  margin: 20px auto;
+  width: 90%;
+  height: 90vh;
+  background-size: cover;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main > div.card div.card-txt{
+  margin-top: 50px;
+  text-align: center;
+  color: #fff;
+}
+main> div.card div.card-btn{
+  margin-bottom: 30px;
+}
+main > div.card div.card-txt> p{
+  font-size: 50px;
+}
+main > div.card> div.card-txt> a{
+  text-decoration: underline;
+  color: #fff;
+}
+
+main> div.one{
+  background-image: url(../IMAGE/image3.jfif);
+  background-size: cover;
+}
+main> div.two{
+  background-image: url(../IMAGE/image2.jfif);
+  background-size: cover;
+}
+main > div.two> div.card-txt> a{
+  text-decoration: none;
+}
+
+main> div.three{
+  background-image: url(../IMAGE/image2.jfif);
+  background-size: cover;
+}
+main > div.four > video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+main > div.four{
+  position: relative;
+}
+main > div.four > div.detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+footer{
+  padding: 50px;
+}
+footer > ul{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: #333;
+  margin: 50px 0;
+}
+/*반응형*/
+@media screen and (max-width: 780px) {
+  header{
+    position: relative;
+  }
+  header> nav{
+    display: block;
+  }
+  header> nav> ul{
+    margin: 1rem auto;
+  }
+  header > nav > ul> li{
+    display: block;
+    font-size: 1rem;
+  }
+  header > nav > .icons{
+    position: absolute;
+    right: 10px;
+    top: 2rem;
+  }
+  .header-btn{
+    position: absolute;
+    left: 1rem;
+  }
+}
+
+@media screen and (max-width:780px) {
+  footer> ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

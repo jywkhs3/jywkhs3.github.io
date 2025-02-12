@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOMENTUM DASH</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="">
+  <section id="welcome" style="display: block;">
+    <h1>WELCOME!</h1>
+  </section>
+  <section id="start" style="display: block;">
+    <div class="login">
+      <p class="name">What's your name?</p>
+      <form id="loginName">
+        <input type="text">
+      </form>
+    </div>
+  </section>
+  <main style="display: block;">
+    <div class="top">
+      <article id="memo">
+        <div class="TODAY">
+          <i class="fa-regular fa-note-sticky"></i>
+          <p>Today</p>
+        </div>
+      </article>
+        <div class="today-input hidden">
+          <form id="todo">
+            <input type="text" placeholder="Write your today list!" required>
+          </form>
+          <fieldset>
+            <legend>"Today-list"</legend>
+            <div class="todo-list">
+              <!-- <label>
+                <input type="checkbox">
+                <span>workout</span>
+                <span class="x">x</span>
+              </label>
+              <label><input type="checkbox"><span>workout</span></label>
+              <label><input type="checkbox"><span>workout</span></label> -->
+            </div>
+        </div>
+        </fieldset>
+
+      <article id="weather">
+        <p class="temp hidden"></p>
+        <p class="current hidden"></p>
+        <i class="fa-solid fa-cloud-sun"></i>
+      </article>
+    </div>
+    <div class="center light">
+      <div class="c-top">
+        <div class="top-item">
+          <p class="currentdate"></p>
+          <img src="./images/sunset-light.png" alt="sunsetimg">
+          <p class="sunsetrise"></p>
+        </div>
+      </div>
+      <h2></h2>
+      <div class="c-txt">
+        <p class="hello">good morning,</p>
+        <p class="name"></p>
+      </div>  
+    </div>
+    <div class="bottom">
+      <i class="fa-solid fa-moon"></i>
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <article class="b-dates">
+        <p>Tue</p>
+        <p></p>
+      </article>
+    </div>
+  </main>
+  <script src="./script/login-start.js"></script>
+  <script src="./script/current-weatherdate.js"></script>
+  <script src="./script/clock-main.js"></script>
+  <script src="./script/todaylist-main.js"></script>
+  <script src="./script/mode-bottom.js"></script>
+
+</body>      
+</html>  

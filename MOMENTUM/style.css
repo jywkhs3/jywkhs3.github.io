@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+:root{
+  --darkmode-background:#222;
+  --lightmode-background-:#a3a3a3;
+  --darkmode-text:#fff;
+  --lightmode-text:#222;
+}
+body{
+  height: 100vh;
+  color: var(--darkmode-text);
+  background-color: var(--darkmode-background);
+  background-image: url(./images/Earth1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+body.dark{
+  background-color: var(--darkmode-background);
+  color: var(--darkmode-text);
+}
+body.light{
+  background-color: var(--lightmode-background-);
+  color: var(--lightmode-text);
+}
+.hidden{
+  display: none;
+}
+.x{
+  color: red;
+  padding: 0 5px;
+}
+
+/**welcome**/
+#welcome{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+#welcome> h1{
+  font-size: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/**start**/
+#start{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.login{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.login> .name{
+  font-size: 6rem;
+  font-weight: bolder;
+  padding-bottom: 50px;
+}
+.login> form> input{
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid #fff;
+  outline: none;
+  background-color: transparent;
+  color: var(--darkmode-text);
+  font-size: 4rem;
+  text-align: center;
+}
+
+/***main***/
+main{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* display: none; */
+}
+/**memo**/
+.top{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+#memo{
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.TODAY{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.TODAY> p{
+  font-size: 2rem;
+}
+.TODAY> i{
+  font-size: 3rem;
+  animation: 1s;
+}
+.today-input{
+  position: fixed;
+  top: 80px;
+}
+.today-input> form> input{
+  padding: 5px 0;
+}
+.today-input> form> input::placeholder{
+  text-align: center;
+}
+fieldset{
+  padding: 10px;
+  background-color: rgba(197, 197, 197, 0.3);
+}
+.todo-list> label{
+  display: block;
+}
+.todo-list> label> input, .x{
+  cursor: pointer;
+}
+#weather{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+#weather> i{
+  font-size: 3rem;
+}
+#weather> .temp{
+  font-size: 2rem;
+  font-weight: bolder;
+}
+#weather> .current{
+  font-size: 1rem;
+}
+/***center***/
+.center.light{
+  color: var(--darkmode-text);
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.c-top{
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  padding: 5px;
+}
+.top-item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.top-item> img{
+  position: fixed;
+  right: 40%;
+}
+h2{
+  font-size: 15rem;
+}
+.c-txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+.c-txt> p:nth-of-type(2){
+  border-bottom: 2px solid #fff;
+}
+
+/***bottom***/
+.bottom{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+.bottom> i{
+  font-size: 3rem;
+  cursor: pointer;
+}
+.bottom> article> p:nth-of-type(1){
+  font-size: 2rem;
+  font-weight: bolder;
+  position: fixed;
+  right: 0;
+}
+.bottom> article> p:nth-of-type(2){
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
