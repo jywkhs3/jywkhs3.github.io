@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Scroll</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{
+      background-color: rgb(156, 240, 212);
+    }
+    header, .content{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header{
+      background-color: rgb(156, 240, 212);
+    }
+    section:nth-of-type(2){
+      text-align: center;
+    }
+    h2{
+      color: #fff;
+    }
+    .content{
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .one{
+      background-image: url(./river.jpg);
+    }
+    .two{
+      background-image: url(./mountain.jpg);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Parallax Scroll Example</h1>
+  </header>
+  <section class="content one">
+    <h2>section-1</h2>
+  </section>
+  <section><h2>section-2</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat reprehenderit incidunt velit cupiditate, sunt adipisci dolorem voluptas impedit delectus ratione maxime nulla libero nam magnam natus. Voluptas, maiores dolorem.</p></section>
+  <section class="content two">
+    <h2>section-3</h2>
+  </section>
+</body>
+</html>
