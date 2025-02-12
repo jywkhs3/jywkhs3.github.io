@@ -51,7 +51,7 @@ header > nav{
 header{
   height: 100%;
   background-size: cover;
-  background-image: url(../IMAGE/image0.jfif);
+  background-image: url(../image/image0.jfif);
   color: #fff;
   font-size: 20px;
   position: relative; /*기준범위*/
@@ -133,11 +133,11 @@ main > div.card> div.card-txt> a{
 }
 
 main> div.one{
-  background-image: url(../IMAGE/image3.jfif);
+  background-image: url(../image/image3.jfif);
   background-size: cover;
 }
 main> div.two{
-  background-image: url(../IMAGE/image2.jfif);
+  background-image: url(../image/image2.jfif);
   background-size: cover;
 }
 main > div.two> div.card-txt> a{
@@ -145,7 +145,7 @@ main > div.two> div.card-txt> a{
 }
 
 main> div.three{
-  background-image: url(../IMAGE/image2.jfif);
+  background-image: url(../image/image2.jfif);
   background-size: cover;
 }
 main > div.four > video{
