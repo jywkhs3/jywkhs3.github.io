@@ -177,6 +177,16 @@ footer > ul{
   gap: 10px;
   color: #333;
   margin: 50px 0;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 2rem;
+}
+footer> ul > li{
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer> ul > li:hover{
+  color: cornflowerblue;
 }
 /*반응형*/
 @media screen and (max-width: 780px) {
@@ -202,12 +212,19 @@ footer > ul{
     position: absolute;
     left: 1rem;
   }
-}
-
-@media screen and (max-width:780px) {
   footer> ul{
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
+  .card-btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;    
+    gap: 10px;
+  }
+  .btn{
+    margin-right: 0;
+    padding: 1rem;
+  }
 }
+
