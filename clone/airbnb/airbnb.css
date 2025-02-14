@@ -221,7 +221,7 @@ nav> .filter{
 }
 nav> .filter:hover{
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 /**숙소 card list**/
 main> .card-list{
@@ -313,6 +313,7 @@ main .card> .card-txt> .card-txt1{
 }
 main .card> .card-txt> p{
   color: #555;
+  font-size: 1rem;
 }
 main .card> .card-txt> p:last-child{
   font-size: 15px;
@@ -359,6 +360,9 @@ footer> p:nth-child(2){
   }
   .mobile-menu{
     display: flex;
+  }
+  .icon> .item> img{
+    width: 50px;
   }
   main .card{
     width: 100%;
