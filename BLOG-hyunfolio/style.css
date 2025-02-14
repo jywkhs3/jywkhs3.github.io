@@ -78,9 +78,6 @@ nav> .menu-btn> i{
   height: 800px;
 }
 /**profile**/
-.profile{
-
-}
 #profile> div> article> .profile> h2{
   font-size: 25rem;
 }
@@ -198,6 +195,7 @@ nav> .menu-btn> i{
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 20px;
 }
 .bottom> .date{
   background-color: var(--color-main);
@@ -254,6 +252,9 @@ nav> .menu-btn> i{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.circle{
+  margin-top: 20px;
 }
 #work> .circle> span{
   display: inline-block;
