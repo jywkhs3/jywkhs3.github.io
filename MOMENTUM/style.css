@@ -1,6 +1,9 @@
 @charset "utf-8";
 
-*{margin: 0;padding: 0;}
+*{
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+}
 :root{
   --darkmode-background:#222;
   --lightmode-background-:#a3a3a3;
@@ -15,6 +18,7 @@ body{
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  padding: 20px;
 }
 body.dark{
   background-color: var(--darkmode-background);
@@ -30,6 +34,12 @@ body.light{
 .x{
   color: red;
   padding: 0 5px;
+}
+i{
+  transition: 0.5s;
+}
+i:hover{
+  transform: scale(1.5);
 }
 
 /**welcome**/
@@ -203,7 +213,11 @@ h2{
 .bottom> i{
   font-size: 3rem;
   cursor: pointer;
+  /* transition: 0.5s; */
 }
+/* .bottom> i:hover{
+  transform: scale(1.2);
+} */
 .bottom> article> p:nth-of-type(1){
   font-size: 2rem;
   font-weight: bolder;
