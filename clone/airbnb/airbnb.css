@@ -352,6 +352,9 @@ footer> p:nth-child(2){
   main .card{
     width: 45%;
   }
+  nav > .filter{
+    display: none;
+  }
 
 }
 @media screen and (max-width:740px) {
@@ -366,6 +369,9 @@ footer> p:nth-child(2){
   }
   main .card{
     width: 100%;
+  }
+  .filter{
+    display: none;
   }
 
 }
