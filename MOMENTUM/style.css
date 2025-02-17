@@ -165,26 +165,30 @@ fieldset{
 }
 .top-item{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-size: 2rem;
   font-weight: bolder;
 }
 .top-item> img{
   position: fixed;
-  right: 40%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 h2{
   font-size: 15rem;
 }
 .c-txt{
+  background-color: rgba(197, 197, 197, 0.3);
+  border-radius: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 4rem;
 }
 .c-txt> p:nth-of-type(2){
   border-bottom: 2px solid #fff;
+  font-weight: bolder;
 }
 
 /***bottom***/

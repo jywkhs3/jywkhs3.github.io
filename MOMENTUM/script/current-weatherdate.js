@@ -24,7 +24,7 @@ const toDay=()=>{
   bottomDate.textContent=`${years}-${months}-${dates}`;
   bottomDay.textContent=`${strDays}`;
 }
-
+//데이터 위치
 const success=(position)=>{
   const lat=position.coords.latitude;
   const lon=position.coords.longitude;
@@ -43,18 +43,39 @@ const success=(position)=>{
     sunset= new Date(data.sys.sunset*1000);
     // console.log(sunrise);
     // console.log(sunset);
+    sunTime();
   });
 }
 //일출,일몰시간계산
-const sunTime=(current)=>{
-  if(sunrise<current){
-    // sunsetrise.textContent=`${sunset}`;
+const sunTime=()=>{
+  if (!sunrise || !sunset) {
+    console.log("일출/일몰 데이터를 아직 불러오지 못했습니다.");
+    return;
   }
+  const now = new Date();
+  let nextTime = '';
+  // let nextEvent = '';
+  if(now < sunrise){
+    //오늘 일출
+    nextTime = sunrise.toLocaleTimeString();
+    // sunsetrise.textContent=`${sunset}`;
+  } else if(now < sunset){
+    // 오늘 일몰
+    nextTime = sunset.toLocaleTimeString();
+  } else{
+    // 내일 일출
+    const nextSunrise = new Date(sunrise);
+    nextSunrise.setDate(sunrise.getDate()+1);
+    nextTime = nextSunrise.toLocaleTimeString();
+  }
+  sunsetrise.textContent = `${nextTime}`;
 }
+//실시간 날씨 아이콘 클릭
 const handlerWeather=(e)=>{
   temp.classList.toggle('hidden');
   currentMap.classList.toggle('hidden');
 }
+//가져올 수 없을 때
 const error=()=>{
   console.log('error');
 }
@@ -73,5 +94,6 @@ const weather_Init=()=>{
     handlerWeather(event);
   });
   toDay();
+  setInterval(sunTime, 60000);
 }
 weather_Init();

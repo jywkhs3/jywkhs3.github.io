@@ -16,6 +16,7 @@ const loadLoginName=()=>{
 }
 
 const printLoginName=(strName)=>{
+  if (!strName)return;
   goodname.textContent=`"${strName}"`;
   main.style.display=('block');
   startPage.style.display=('none');
@@ -23,9 +24,11 @@ const printLoginName=(strName)=>{
 }
 const handlerSubmit=(event)=>{
   event.preventDefault();
-  printLoginName(input.value);
-  saveLoginName(input.value);
-  input.value=null;
+  const userName = input.value.trim();
+  if(userName === '') return;
+  printLoginName(userName);
+  saveLoginName(userName);
+  input.value='';
 }
 const init=()=>{
   //처음 실행되는 함수
@@ -33,6 +36,11 @@ const init=()=>{
   if(loginName){
     printLoginName(loginName);
   }else{
+    //윈도우 첫 실행시 나타나는 화면
+    welcome.style.display = 'block';
+    startPage.style.display = 'none';
+    main.style.display = 'none';
+
     loginForm.addEventListener('submit',handlerSubmit);
   }
   welcome.addEventListener('click',()=>{
