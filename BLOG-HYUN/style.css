@@ -647,7 +647,7 @@ footer> .f-txt> p{
     right: 0;
   }
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:425px) {
   html{
     font-size: 45%;
   }
