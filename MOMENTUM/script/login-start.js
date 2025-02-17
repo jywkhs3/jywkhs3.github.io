@@ -25,10 +25,11 @@ const printLoginName=(strName)=>{
 const handlerSubmit=(event)=>{
   event.preventDefault();
   const userName = input.value.trim();
-  if(userName === '') return;
+  if(userName){
   printLoginName(userName);
   saveLoginName(userName);
   input.value='';
+  }
 }
 const init=()=>{
   //처음 실행되는 함수
